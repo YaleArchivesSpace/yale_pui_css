@@ -1,1 +1,340 @@
-/* add Steve's awesome CSS updates here */
+/*
+ * 2018-03-16 Yale University Library
+ */
+
+/*
+ * This is the original yale.css file, which was quite brief.
+ */
+
+ @media print {
+  body, 
+  #container {
+    width: 100%;
+    margin: 0;
+    float: none;
+    background: #fff url(none);
+    color: #000;
+    font-size: 10pt;
+  }
+  header,
+  footer,
+  #archivesSpaceSidebar,
+  #accession_classifications_,
+  .record-toolbar,
+  .breadcrumb-row,
+  .sidebar,
+  .actions,
+  .table-record-actions {
+    display:none;
+  }
+  label:after {content: ": ";}
+  label {font-weight: bold; float:left;}
+  .label-only {float:left; margin-top: -5pt;}
+}
+
+/*
+ * This is the new CSS that pulls in the yale.edu look-and-feel.
+ */
+
+/* YaleDesign:  The locally-developed official wordmark and serif font for Yale */
+@font-face {
+  font-family: 'YaleDesign-Medium';
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'YaleDesign-Bold';
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'YaleDesign-Italic';
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-italic-webfont.eot");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-italic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-italic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-italic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: 'YaleDesign-Bold-Italic';
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.woff") format("woff");
+}
+
+/* Mallory:  The official sans-serif font of *.yale.edu */
+@font-face {
+    font-family: 'Mallory-Light';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-Light.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-Light.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-LightItalic';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-LightItalic.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-LightItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-Book';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-Book.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-Book.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-BookItalic';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-BookItalic.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-BookItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-Bold';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-Bold.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-BoldItalic';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-BoldItalic.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-Medium';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-Medium.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Mallory-MediumItalic';
+    src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff") format("woff"),
+            url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'customicons';
+    src: url("//libweb.library.yale.edu/fonts/custom/customicons.eot");
+    src: url("//libweb.library.yale.edu/fonts/custom/customicons.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/custom/customicons.woff") format("woff"), url("//libweb.library.yale.edu/fonts/custom/customicons.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/custom/customicons.svg#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* FontAwesome:  Icons, etc. */  
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/assets/fontawesome-webfont.eot?v=4.1.0");
+    src: url("//libweb.library.yale.edu/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+  font-family: 'Mallory-Light';
+  background-color: #ffffff;
+}
+
+section#header {
+  background-color: #00356b;
+}
+
+/* !important needed to override an explicit !important in style.css line 9 */
+#header > div.row {
+  border: 0px !important;
+}
+
+div.h1 {
+  margin-top: 10px;
+}
+
+div.h1 > a:after {
+  content: "Archives@Yale";
+}
+
+div.h1 > a,
+div.h1 > a:hover {
+  font-family: 'YaleDesign-Medium';
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* This gets rid of the Yale logo and should be taken care of in code. */
+div.h1 > a > img {
+  display: none;
+}
+
+nav.navbar {
+  border: 0px;
+}
+
+/* 
+  * !important required to override an applicationxxxxx.css (autogen) 
+  * There is no !important directive in this file.
+  */
+.top-bar {
+  background-color: #000000 !important;
+  border: 0px;
+}
+
+/* 
+  * !important required to override color in applicationxxxxx.css (autogen) 
+  * There is no !important directive in this file for color.
+  * The font-size cannot be displayed as there is an !important
+  * directive in the applicationxxxxx.css file.
+  */
+ul.navbar-nav > li > a,
+ul.navbar-nav > li > a:hover {
+  font-family: 'Mallory-Light';
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+ul.navbar-nav > li > a:hover {
+  color: #63aaff !important;
+  transition-duration: 0.3s;
+}
+
+h1 {
+  font-family: 'Mallory-medium';
+  color: #555;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Mallory-Medium';
+  font-weight: 500;
+  color: #00356b;
+}
+
+span.inline-label {
+  font-family: 'Mallory-Medium';
+}
+
+.btn-primary {
+  background-color: #00356b;
+  font-size: 1.2em;
+  font-family: 'Mallory-Medium';
+}
+
+div.footer {
+  background-color: #000;
+  color: #bbbbbb;
+}
+
+div.footer .links {
+  padding-top: 20px;
+}
+
+div.footer .links a,
+div.footer .links a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* This is just to clear the Lyrasis logo.  Handle in code and remove this. */
+div.footer .links img {
+  display: none;
+}
+
+/* 
+  * This :before directive is just there to put in a text placeholder.
+  * This must be handled in code and removed from this css file.
+  */
+div.profile:before {
+  content: "Archives@Yale";
+}
+
+div.profile {
+  color: #ffffff;
+  font-family: 'YaleDesign-Medium';
+  font-size: 30px;
+  font-weight: 500;
+  vertical-align: middle;
+  margin-top: 0px !important;
+  padding: 10px 0px 10px 15px;
+}
+
+/* 
+ * Float the breadcrumbs to the top of the page.
+ * This should absolutely be changed in code as this
+ * is a total hack.
+ */
+div#main-content {
+    display: table;
+}
+.clear {
+    display: table-header-group;
+}
+
+/* 
+ * Move the collection organization box to the left 
+ * This should be changed in code.
+ */
+.col-sm-9 {
+  float: right;
+}
+
+/* test for pointer breadcrumbs */
+ul.breadcrumb li {
+  height: 30px;
+  position: relative;
+  background: #00356d;
+  margin-right: 12px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+ul.breadcrumb li:before {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+ul.breadcrumb li:after {
+  content: "" !important;
+  position: absolute;
+  right: -15px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #00356d;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+ul.breadcrumb li:first-child:before {
+  display: none
+}
+
+ul.breadcrumb li:last-child,
+ul.breadcrumb li:last-child:before,
+ul.breadcrumb li:last-child:after {
+  background-color: unset;
+  border: unset;
+  padding: unset;
+  margin: unset;
+  padding: 4px;
+  font-family: 'Mallory-Medium';
+  color: #000000;
+}
+
+ul.breadcrumb li a {
+  padding: 5px 5px 0px 20px;
+  position: relative;
+  display: block;
+  color: #ffffff;
+}
+
+ul.breadcrumb li:first-child a{
+  padding-left: 10px;
+}
+
+.record-type-badge.archival_object {
+  font-family: 'Mallory-Medium';
+  font-weight: 500;
+}
+
+.identifier span.id-label {
+  font-family: 'Mallory-Medium';
+}
+
+h4 {
+  font-family: 'Mallory-Medium';
+  font-weight: 500;
+}
