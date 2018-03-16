@@ -3,36 +3,6 @@
  */
 
 /*
- * This is the original yale.css file, which was quite brief.
- */
-
- @media print {
-  body, 
-  #container {
-    width: 100%;
-    margin: 0;
-    float: none;
-    background: #fff url(none);
-    color: #000;
-    font-size: 10pt;
-  }
-  header,
-  footer,
-  #archivesSpaceSidebar,
-  #accession_classifications_,
-  .record-toolbar,
-  .breadcrumb-row,
-  .sidebar,
-  .actions,
-  .table-record-actions {
-    display:none;
-  }
-  label:after {content: ": ";}
-  label {font-weight: bold; float:left;}
-  .label-only {float:left; margin-top: -5pt;}
-}
-
-/*
  * This is the new CSS that pulls in the yale.edu look-and-feel.
  */
 
@@ -107,7 +77,7 @@
     font-style: normal;
 }
 
-/* FontAwesome:  Icons, etc. */  
+/* FontAwesome:  Icons, etc. */
 @font-face {
     font-family: 'FontAwesome';
     src: url("/assets/fontawesome-webfont.eot?v=4.1.0");
@@ -133,10 +103,10 @@ section#header {
 
 div.h1 {
   margin-top: 10px;
-}
-
-div.h1 > a:after {
-  content: "Archives@Yale";
+  /* adding this for the homepage */
+  font-family: 'YaleDesign-Medium';
+  font-weight: 500;
+  color: #ffffff;
 }
 
 div.h1 > a,
@@ -147,17 +117,13 @@ div.h1 > a:hover {
   text-decoration: none;
 }
 
-/* This gets rid of the Yale logo and should be taken care of in code. */
-div.h1 > a > img {
-  display: none;
-}
 
 nav.navbar {
   border: 0px;
 }
 
-/* 
-  * !important required to override an applicationxxxxx.css (autogen) 
+/*
+  * !important required to override an applicationxxxxx.css (autogen)
   * There is no !important directive in this file.
   */
 .top-bar {
@@ -165,8 +131,8 @@ nav.navbar {
   border: 0px;
 }
 
-/* 
-  * !important required to override color in applicationxxxxx.css (autogen) 
+/*
+  * !important required to override color in applicationxxxxx.css (autogen)
   * There is no !important directive in this file for color.
   * The font-size cannot be displayed as there is an !important
   * directive in the applicationxxxxx.css file.
@@ -221,18 +187,6 @@ div.footer .links a:hover {
   text-decoration: none;
 }
 
-/* This is just to clear the Lyrasis logo.  Handle in code and remove this. */
-div.footer .links img {
-  display: none;
-}
-
-/* 
-  * This :before directive is just there to put in a text placeholder.
-  * This must be handled in code and removed from this css file.
-  */
-div.profile:before {
-  content: "Archives@Yale";
-}
 
 div.profile {
   color: #ffffff;
@@ -244,24 +198,17 @@ div.profile {
   padding: 10px 0px 10px 15px;
 }
 
-/* 
+/*
  * Float the breadcrumbs to the top of the page.
  * This should absolutely be changed in code as this
  * is a total hack.
- */
-div#main-content {
-    display: table;
-}
-.clear {
-    display: table-header-group;
-}
 
-/* 
- * Move the collection organization box to the left 
- * This should be changed in code.
+ MDC: Need to come up with another solution to move the breadcrumbs, if desired.
+ The proof-of-concept method has negative impacts elsewhere in the site.
  */
-.col-sm-9 {
-  float: right;
+ /* for now, i'm just adding some spacing before the breadcrumbs */
+div#info_row {
+  margin-bottom:1em;
 }
 
 /* test for pointer breadcrumbs */
