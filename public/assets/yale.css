@@ -102,11 +102,15 @@ section#header {
 }
 
 div.h1 {
+  /* mdc: removing this!
   margin-top: 10px;
+  */
   /* adding this for the homepage */
   font-family: 'YaleDesign-Medium';
   font-weight: 500;
   color: #ffffff;
+  /* adding the font-size back */
+  font-size: 2.5em;
 }
 
 div.h1 > a,
@@ -152,7 +156,7 @@ ul.navbar-nav > li > a:hover {
 h1 {
   font-family: 'Mallory-medium';
   color: #555;
-  font-size: 2em;
+  font-size: 1.65em;
   font-weight: 500;
 }
 
@@ -166,15 +170,16 @@ span.inline-label {
   font-family: 'Mallory-Medium';
 }
 
-.btn-primary {
+.btn-dark {
   background-color: #00356b;
   font-size: 1.2em;
   font-family: 'Mallory-Medium';
 }
 
 div.footer {
-  background-color: #000;
+  background-color: #00356b;
   color: #bbbbbb;
+  margin-top: 3em;
 }
 
 div.footer .links {
@@ -211,7 +216,12 @@ div#info_row {
   margin-bottom:1em;
 }
 
-/* test for pointer breadcrumbs */
+
+
+/* test for pointer breadcrumbs
+a few updated by mdc.... adding color and padding here,
+since the classification breadcrumbs don't always have an anchor links
+ */
 ul.breadcrumb li {
   height: 30px;
   position: relative;
@@ -221,6 +231,8 @@ ul.breadcrumb li {
   display: inline-block;
   margin-bottom: 5px;
   font-size: 12px;
+  color: #ffffff;
+  padding: 5px 5px 0px 5px;
 }
 ul.breadcrumb li:before {
   content: "" !important;
@@ -245,11 +257,25 @@ ul.breadcrumb li:after {
   border-bottom: 15px solid transparent;
 }
 
+
 ul.breadcrumb li:first-child:before {
   display: none
 }
 
-ul.breadcrumb li:last-child,
+/*mdc: removing the background color from the default
+stylesheet */
+.breadcrumb {
+  background-color: transparent;
+  border: 1px solid #f5f5f5;
+}
+
+/*mdc: need one more fix for classificiton pages.
+can have a single li, but no Anchor.  in that case, we need to keep the font black.
+*/
+
+
+/* mdc: added :not(:only-child) for searching-within-collection pages */
+ul.breadcrumb li:last-child:not(:only-child),
 ul.breadcrumb li:last-child:before,
 ul.breadcrumb li:last-child:after {
   background-color: unset;
@@ -262,7 +288,6 @@ ul.breadcrumb li:last-child:after {
 }
 
 ul.breadcrumb li a {
-  padding: 5px 5px 0px 20px;
   position: relative;
   display: block;
   color: #ffffff;
@@ -284,4 +309,275 @@ ul.breadcrumb li:first-child a{
 h4 {
   font-family: 'Mallory-Medium';
   font-weight: 500;
+}
+
+/* footer stuff, first pass (copied from FindIt) */
+.footer {
+    padding: .5em 0 .5em 0;
+    width: 100%;
+    height: 10%;
+    background-color: #01346B
+}
+
+#footer-links {
+    float: left;
+    margin-left: 35px;
+}
+
+#footer-links a {
+    color: #fff;
+    display: inline-block;
+    list-style-type: disc;
+    padding: 0.15em 0.15em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 5px;
+    margin-right: 10px
+}
+
+#footer-links a:hover {
+    background-color: #014d9e;
+    border-bottom: none;
+    padding: 0.15em 0.15em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 5px;
+    text-decoration: none;
+    margin-right: 10px
+}
+
+#footer-links span {
+    /*border-right: solid 1px #014d9e;*/
+    margin-right: 5px
+}
+
+
+span.YaleLogo a:hover {
+    padding: 5px
+}
+
+
+.sm-icons {
+    display: inline-block;
+    float: right;
+    margin: 1em 1em 0 0
+}
+
+.sm-icons a {
+    color: #fff;
+    display: inline-block;
+    list-style-type: disc;
+    padding: 0.35em 0.4em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 5px;
+    margin-right: 5px
+}
+
+.sm-icons a:hover {
+    background-color: #014d9e;
+    border-bottom: none;
+    padding: 0.35em 0.4em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 5px;
+    text-decoration: none;
+    margin-right: 5px
+}
+
+.sm-icons i {
+    font-size: 2em
+}
+
+.YaleLogo {
+    font-family: 'YaleDesign-Medium';
+    font-size: 29px;
+    line-height: 30px
+}
+
+.YaleLogo a {
+    color: #fff;
+    margin-right: 5px
+}
+
+/* mdc: bug fixes for Definition List layout
+should update so that this update
+is Responsive, as well*/
+/* add more width so there's no truncation */
+  .dl-horizontal dt {
+    width: 190px;
+  }
+/* add more space between the dt and dd */
+.dl-horizontal dd {
+  margin-left: 220px;
+}
+
+/*mdc: temp change to shrink header a bit */
+#header > .row {
+  height: 4.7rem;
+}
+
+/*mdc: temp fix for font override */
+.record-type-badge {
+  font-family: "Mallory-Medium";
+}
+
+/*mdc: i just can't stand those rounded pills no more */
+/* line 109 aspace.scss */
+.tabbing.nav-pills > li:first-child a {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.tabbing.nav-pills > li:last-child a {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* line 101, aspace.scss */
+.tabbing.nav-pills > li > a {
+  margin-left: 0px;
+}
+
+/* mdc: facet to the rights */
+.pull-right {
+  float:right;
+}
+
+/*mdc: more changes, now for the new sidebar stuff */
+
+@media (min-width: 992px) {
+  /* line 855, aspace.scss */
+  #sidebar.resizable-sidebar {
+    position: relative;
+    padding-left: 35px;
+  }
+  /* line 859, aspace.scss */
+  #sidebar.resizable-sidebar .resizable-sidebar-handle {
+    background-color: #f9f9f9;
+    position: absolute;
+    height: 100%;
+    width: 25px;
+    top: 0;
+    left: 0;
+    cursor: ew-resize;
+    background-image: url(/assets/sidebar_drag_handle.png);
+    background-repeat: repeat-y;
+    background-position: top;
+  }
+}
+/* line 7, largetree.scss */
+.largetree-container {
+  background-color: transparent;
+}
+.largetree-container tr td {
+  border-bottom: 1px solid #ddd;
+}
+
+/*mdc: uncomment the next 3 declarations for a gray background
+for the current section */
+/* line 125, largetree.scss */
+.largetree-container tr.current {
+ /*outline: 1px solid #978d85; */
+}
+/* line 128, largetree.scss */
+.largetree-container tr.current td {
+/* background-color: #4a4a4a;*/
+}
+.largetree-container tr.current td a {
+  /*color: #fff;*/
+}
+
+
+/* line 133, largetree.scss */
+.largetree-container .indentor {
+  background-color: #f9f9f9;
+}
+/* line 143, largetree.scss */
+.largetree-container table.root tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+/* line 146, largetree.scss */
+.largetree-container table.root tbody tr:first-child {
+     background-color: transparent
+}
+
+/*mdc: more changes, just because the non-yale blues are bothering me now */
+/* line 101, /Users/mc2343/Documents/Github/archivesspace/public/app/assets/stylesheets/archivesspace/aspace.scss */
+.tabbing.nav-pills > li > a {
+  background-color: #286dc0;
+}
+
+/*mdc: infinite scroll page stuff (just for testing/finding purposes) */
+/*
+div.infinite-record-scrollbar {
+  background-color: #ddd;
+  margin-left: 20px;
+}
+*/
+
+/* mdc: just because the default gray background is bothering me */
+/* line 483, aspace.scss */
+.searchstatement {
+  background-color: transparent;
+}
+
+div.sm-icons a.hashtag {
+   vertical-align: middle;
+   display:inline-block;
+   height: 3em;
+}
+
+div.sm-icons a.hashtag:hover {
+    background-color: transparent;
+    color: #63aaff;
+    margin-right: 5px
+}
+
+/*mdc: css dropdown stuff for Repositories */
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/*needed to keep accessible*/
+ul.navbar-nav > li.dropdown > a.dropdown-toggle:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
