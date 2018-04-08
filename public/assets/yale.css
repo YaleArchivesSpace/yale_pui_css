@@ -92,7 +92,7 @@ body {
   background-color: #ffffff;
 }
 
-section#header {
+#header {
   background-color: #00356b;
 }
 
@@ -156,8 +156,15 @@ ul.navbar-nav > li > a:hover {
 h1 {
   font-family: 'Mallory-medium';
   color: #555;
-  font-size: 1.65em;
+  font-size: 1.75em;
   font-weight: 500;
+}
+
+h2 {
+  font-family: 'Mallory-Medium';
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #00356b;
 }
 
 h3 {
@@ -165,6 +172,14 @@ h3 {
   font-weight: 500;
   color: #00356b;
 }
+
+h4, h2.smaller_gray {
+  font-family: 'Mallory-Medium';
+  font-weight: 500;
+  color: inherit;
+  font-size: 1.15em;
+}
+
 
 span.inline-label {
   font-family: 'Mallory-Medium';
@@ -176,18 +191,18 @@ span.inline-label {
   font-family: 'Mallory-Medium';
 }
 
-div.footer {
+footer.footer {
   background-color: #00356b;
   color: #bbbbbb;
   margin-top: 3em;
 }
 
-div.footer .links {
+footer.footer .links {
   padding-top: 20px;
 }
 
-div.footer .links a,
-div.footer .links a:hover {
+footer.footer .links a,
+footer.footer .links a:hover {
   color: #ffffff;
   text-decoration: none;
 }
@@ -232,7 +247,7 @@ ul.breadcrumb li {
   margin-bottom: 5px;
   font-size: 12px;
   color: #ffffff;
-  padding: 5px 5px 0px 5px;
+  padding: 5px 5px 0px 20px;
 }
 ul.breadcrumb li:before {
   content: "" !important;
@@ -297,19 +312,15 @@ ul.breadcrumb li:first-child a{
   padding-left: 10px;
 }
 
-.record-type-badge.archival_object {
+.record-type-badge {
   font-family: 'Mallory-Medium';
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .identifier span.id-label {
   font-family: 'Mallory-Medium';
 }
 
-h4 {
-  font-family: 'Mallory-Medium';
-  font-weight: 500;
-}
 
 /* footer stuff, first pass (copied from FindIt) */
 .footer {
@@ -374,7 +385,7 @@ span.YaleLogo a:hover {
 .sm-icons {
     display: inline-block;
     float: right;
-    margin: 1em 1em 0 0
+    margin: 1.5em 1em 0 0
 }
 
 .sm-icons a {
@@ -531,7 +542,7 @@ for the current section */
 }
 
 /*mdc: more changes, just because the non-yale blues are bothering me now */
-/* line 101, /Users/mc2343/Documents/Github/archivesspace/public/app/assets/stylesheets/archivesspace/aspace.scss */
+/* line 101, archivesspace/aspace.scss */
 .tabbing.nav-pills > li > a {
   background-color: #286dc0;
 }
@@ -580,4 +591,72 @@ div.sm-icons a.hashtag:hover {
 ul.navbar-nav > li.dropdown > a.dropdown-toggle:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+/*mdc: more spacing above the repo badges */
+#whats-in-container {
+  margin-top: 2.25rem;
+}
+div.contact_info {
+  margin-bottom:1.75rem;
+}
+
+/*mdc: link color is virtually impossible to meet
+should we underline all links? */
+a {
+  /*
+  text-decoration: underline;
+  color: #286dc0;
+  */
+  font-weight: 700;
+}
+
+
+/* new color suggestions from S&E group.
+still need tweaking, and discussion. */
+
+/*mdc: orange too light for the white background:
+/* line 49, archivesspace/record-type-badge.scss */
+.record-type-badge.subject {
+  color: #ca5100;
+  border-color: #ca5100;
+}
+/* line 574, archivesspace/aspace.scss */
+button.subject {
+  /* class subject also turns up in finding aid transforms */
+  color: #ca5100;
+}
+
+/* line 21, archivesspace/record-type-badge.scss */
+.record-type-badge.resource {
+  color: #7608b5;
+  border-color: #7608b5;
+}
+button.resource {
+  color: #7608b5;
+}
+
+/* line 41, archivesspace/record-type-badge.scss */
+.record-type-badge.digital_object
+, .record-type-badge.classification
+, .record-type-badge.repository  {
+  color: #000;
+  border-color: #000;
+}
+button.digital_object, button.classificaiton, button.repository {
+  color: #000;
+}
+
+/* line 25, archivesspace/record-type-badge.scss
+adding a new color for archival objects that are a "series"
+oi. */
+.record-type-badge.archival_object.series {
+  color: #0033cc;
+  border-color: #0033cc
+}
+
+/* stuff for suggestion_correction section */
+div.suggest_correction {
+  margin: 3em 0 1em 0;
+  /*border?*/
+  padding: 15px 0;
 }
