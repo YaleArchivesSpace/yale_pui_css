@@ -635,6 +635,13 @@ button.resource {
   color: #7608b5;
 }
 
+/*mdc:  ugh.  when they added this button to the core code,
+they did not add anything to the CSS so that the button
+would match the badge color. */
+button.accession {
+  color: #e01919;
+}
+
 /* line 41, archivesspace/record-type-badge.scss */
 .record-type-badge.digital_object
 , .record-type-badge.classification
@@ -642,7 +649,7 @@ button.resource {
   color: #000;
   border-color: #000;
 }
-button.digital_object, button.classificaiton, button.repository {
+button.digital_object, button.classification, button.repository {
   color: #000;
 }
 
