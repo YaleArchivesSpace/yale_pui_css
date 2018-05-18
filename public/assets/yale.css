@@ -621,8 +621,11 @@ nav ul.breadcrumb li a {
     /*
      * skw:  Reset this from Mallory-Light/700 to a more
      * typeographically appropriate Mallory-Medium/500
-     */
+
+this causes problems in quite a few places (e.g. page action buttons), so I'm commmenting
+it out for now (mdc).
     font-family: Mallory-Medium;
+         */
     font-weight: 500;
   }
 
