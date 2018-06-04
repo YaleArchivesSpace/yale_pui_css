@@ -797,6 +797,7 @@ padding-right: 15px;
 
 .present_list.top_containers {
 padding-left: 0px;
+margin-left: 0px;
 list-style-type: none;
 }
 
@@ -868,15 +869,4 @@ padding: 10px 0px;
 .email {
 display: block;
 margin-top: 10px;
-}
-
-.alert {
-padding-right: 0;
-margin-left: -6px
-}
-
-.alert .well {
-width: 75%;
-float: left;
-margin-left: 25%;
 }
