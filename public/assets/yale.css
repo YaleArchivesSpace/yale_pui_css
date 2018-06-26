@@ -28,6 +28,11 @@
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.woff") format("woff");
 }
 
+@font-face {
+    font-family: "YaleMarks";
+    /* need to know how to embed this; Steve will update later */
+}
+
 /* Mallory:  The official sans-serif font of *.yale.edu */
 @font-face {
     font-family: 'Mallory-Light';
@@ -384,6 +389,38 @@ nav ul.breadcrumb li a {
 span.YaleLogo a:hover {
     padding: 5px
 }
+
+
+/* add these next 4 declarations back
+, once the YaleMarks font is loaded up top.
+(should probably just update all of the html in the footer, as well.)
+
+.y-yale:before {
+	content: '\f2a2';
+}
+
+.y-mark {
+  font-size: 1.1em;
+}
+
+.y-icons {
+  font-family: "YaleMarks";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  display: inline-block;
+}
+
+
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+}
+*/
 
 
 .sm-icons {
@@ -851,13 +888,9 @@ ul.classifications_list ul.breadcrumb>li+li:after {
 }
 
 /* OUP: Repo Page ------------------------------------------------ */
-/* remove the icons and tighten up the contact display ... this should be done in the code. */
+/* tighten up the contact display */
 .contact_info {
 font-size: 18px;
-}
-
-.contact_info i {
- display: none;
 }
 
 .website {
@@ -879,3 +912,14 @@ width: 75%;
 float: left;
 margin-left: 25%;
 }
+
+/*
+changes for changes to accordion section (mdc), now that i've made the entire div a link
+please make better :)
+*/
+.panel-default>.panel-heading>.accordion-toggle {
+color: #333333;
+}
+.panel-default>.panel-heading>.accordion-toggle:hover {
+color: #007eaf;
+text-decoration: none;
