@@ -28,6 +28,11 @@
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.woff") format("woff");
 }
 
+@font-face {
+    font-family: "YaleMarks";
+    /* need to know how to embed this; Steve will update later */
+}
+
 /* Mallory:  The official sans-serif font of *.yale.edu */
 @font-face {
     font-family: 'Mallory-Light';
@@ -222,7 +227,6 @@ div.profile {
  * Float the breadcrumbs to the top of the page.
  * This should absolutely be changed in code as this
  * is a total hack.
-
  MDC: Need to come up with another solution to move the breadcrumbs, if desired.
  The proof-of-concept method has negative impacts elsewhere in the site.
  */
@@ -385,6 +389,38 @@ nav ul.breadcrumb li a {
 span.YaleLogo a:hover {
     padding: 5px
 }
+
+
+/* add these next 4 declarations back
+, once the YaleMarks font is loaded up top.
+(should probably just update all of the html in the footer, as well.)
+
+.y-yale:before {
+	content: '\f2a2';
+}
+
+.y-mark {
+  font-size: 1.1em;
+}
+
+.y-icons {
+  font-family: "YaleMarks";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  display: inline-block;
+}
+
+
+.element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+}
+*/
 
 
 .sm-icons {
@@ -621,7 +657,6 @@ a {
   /*
    * skw:  Reset this from Mallory-Light/700 to a more
    * typeographically appropriate Mallory-Medium/500
-
 this causes problems in quite a few places (e.g. page action buttons), so I'm commmenting
 it out for now (mdc).
   font-family: Mallory-Medium;
@@ -797,7 +832,6 @@ padding-right: 15px;
 
 .present_list.top_containers {
 padding-left: 0px;
-margin-left: 0px;
 list-style-type: none;
 }
 
@@ -853,13 +887,9 @@ ul.classifications_list ul.breadcrumb>li+li:after {
 }
 
 /* OUP: Repo Page ------------------------------------------------ */
-/* remove the icons and tighten up the contact display ... this should be done in the code. */
+/* tighten up the contact display */
 .contact_info {
 font-size: 18px;
-}
-
-.contact_info i {
- display: none;
 }
 
 .website {
@@ -870,3 +900,25 @@ padding: 10px 0px;
 display: block;
 margin-top: 10px;
 }
+
+.alert {
+padding-right: 0;
+margin-left: -6px
+}
+
+.alert .well {
+width: 75%;
+float: left;
+margin-left: 25%;
+}
+
+/*
+changes for changes to accordion section (mdc), now that i've made the entire div a link
+please make better :)
+*/
+.panel-default>.panel-heading>.accordion-toggle {
+color: #333333;
+}
+.panel-default>.panel-heading>.accordion-toggle:hover {
+color: #007eaf;
+text-decoration: none;
