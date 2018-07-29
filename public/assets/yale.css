@@ -923,3 +923,23 @@ color: #333333;
 .panel-default>.panel-heading>.accordion-toggle:hover {
 color: #007eaf;
 text-decoration: none;
+
+/*
+mdc:
+i would like to change this behavior in the model or in sass,
+but for now i'm just overriding the Alert styling here
+to have the same styling;
+and i'm sure there's a more elegant way to do this,
+but i ran into issues when trying to use the "starts with" selector for alert- on the class names.
+*/
+.alert-success, .alert-danger, .alert-warning, .alert-info {
+color: #1b1e21;
+background-color: #f8f8f8;
+border-color: #c6c8ca;
+}
+.alert-danger .alert-link,
+.alert-success .alert-link,
+.alert-warning .alert-link,
+.alert-info .alert-link {
+color: #040505;
+}
