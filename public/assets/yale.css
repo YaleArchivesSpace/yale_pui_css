@@ -102,6 +102,7 @@
 @font-face {
     font-family: 'Modern-Pictograms';
     src: url("/assets/modernpics.woff?v=1.0");
+    url("//libweb.library.yale.edu/fonts/modernpics.woff?v=1.0") format("woff")
     font-weight: normal;
     font-style: normal;
 }
