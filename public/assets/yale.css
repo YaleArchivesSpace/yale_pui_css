@@ -91,6 +91,20 @@
     font-style: normal;
 }
 
+/* 
+ * Modern Pictograms:  Icons recommended by Office of the Printer.
+ * The font below is THE FREE PACK.
+ * The "full pack" should be purchased soon and installed here.
+ * 
+ * At some point there will also be custom icons, likely in another
+ * font pack.  
+ */
+@font-face {
+    font-family: 'Modern-Pictograms';
+    src: url("/assets/modernpics.woff?v=1.0");
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
   font-family: 'Mallory-Light';
