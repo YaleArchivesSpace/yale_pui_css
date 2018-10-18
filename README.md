@@ -10,5 +10,3 @@ Enable the plugin by editing the file in `config/config.rb`:
 Update the "yale.css" file as desired.
 
 Restart the application.
-
-Note: this is just for testing purposes.  We'll incorporate these changes another way once we launch with the PUI.
