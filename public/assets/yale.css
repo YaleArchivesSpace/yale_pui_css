@@ -108,8 +108,12 @@
 }
 
 body {
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   background-color: #ffffff;
+}
+
+a {
+  color: #0053a8;
 }
 
 #header {
@@ -163,7 +167,7 @@ nav.navbar {
   */
 ul.navbar-nav > li > a,
 ul.navbar-nav > li > a:hover {
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   color: #ffffff !important;
   text-decoration: none !important;
 }
@@ -317,7 +321,7 @@ nav ul.breadcrumb li:last-child:after {
   padding: unset;
   margin: unset;
   padding: 2px 5px;
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   color: #000000;
   content: '' !important;
 }
@@ -838,7 +842,7 @@ padding-left: 0px;
 * Button and accordion alignment
 */
 .acc_button {
-font-family: Mallory-Light;
+font-family: Mallory;
 font-weight: 500;
 margin-bottom: 0.5em;
 padding-left: 15px;
