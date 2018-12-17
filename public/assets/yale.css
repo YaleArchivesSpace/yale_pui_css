@@ -83,14 +83,6 @@
     font-style: normal;
 }
 
-/* FontAwesome:  Icons, etc. */
-@font-face {
-    font-family: 'FontAwesome';
-    src: url("/assets/fontawesome-webfont.eot?v=4.1.0");
-    src: url("//libweb.library.yale.edu/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
 
 /*
  * Modern Pictograms:  Icons recommended by Office of the Printer.
@@ -696,14 +688,14 @@ div[class^="record-type-badge"] {
       position: relative;
   }
 
-.fa-yale-accession:before {
-      content: "\f0ad";
-      font-size: .8em;
-      position: absolute;
-      transform: rotate(270deg);
-      left: 2px;
-      top: 3px;
-  }
+  .fa-yale-accession:before {
+        content: "\f0ad";
+        font-size: .6em;
+        position: absolute;
+        transform: rotate(270deg);
+        left: 2px;
+        top: 5px;
+    }
 
 .fa-yale-accession:after {
       content: "\f016";
