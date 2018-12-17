@@ -693,7 +693,7 @@ div[class^="record-type-badge"] {
         font-size: .6em;
         position: absolute;
         transform: rotate(270deg);
-        left: 2px;
+        left: 2.5px;
         top: 5px;
     }
 
