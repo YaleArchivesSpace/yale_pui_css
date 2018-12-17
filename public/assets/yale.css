@@ -74,6 +74,7 @@
     src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff") format("woff"),
             url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff2") format("woff2");
 }
+/* Ask Steve about this (perhaps we can include a few icons that Eve adds here?) */
 @font-face {
     font-family: 'customicons';
     src: url("//libweb.library.yale.edu/fonts/custom/customicons.eot");
@@ -91,10 +92,30 @@
     font-style: normal;
 }
 
+/*
+ * Modern Pictograms:  Icons recommended by Office of the Printer.
+ * The font below is paid PRO PACK.
+ *
+ * At some point there will also be custom icons, likely in another
+ * font pack.
+ (taking this out for now since we're still not using these)
+@font-face {
+    font-family: 'Modern-Pictograms';
+    src: url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.woff") format("woff"),
+         url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.woff2") format("woff2"),
+         url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.eot") format("embedded-opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+*/
 
 body {
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   background-color: #ffffff;
+}
+
+a {
+  color: #0053a8;
 }
 
 #header {
@@ -148,7 +169,7 @@ nav.navbar {
   */
 ul.navbar-nav > li > a,
 ul.navbar-nav > li > a:hover {
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   color: #ffffff !important;
   text-decoration: none !important;
 }
@@ -302,7 +323,7 @@ nav ul.breadcrumb li:last-child:after {
   padding: unset;
   margin: unset;
   padding: 2px 5px;
-  font-family: 'Mallory-Light';
+  font-family: 'Mallory-Book';
   color: #000000;
   content: '' !important;
 }
@@ -665,55 +686,50 @@ it out for now (mdc).
 }
 
 
-/* new color suggestions from S&E group.
-still need tweaking, and discussion. */
-
-/*mdc: orange too light for the white background:
-/* line 49, archivesspace/record-type-badge.scss */
-.record-type-badge.subject {
-  color: #ca5100;
-  border-color: #ca5100;
-}
-/* line 574, archivesspace/aspace.scss */
-button.subject {
-  /* class subject also turns up in finding aid transforms */
-  color: #ca5100;
+/* changing all record type badges to a dark, dark grey */
+div[class^="record-type-badge"] {
+  color: #00171f !important;
+  border-color: #00171f !important;
 }
 
-/* line 21, archivesspace/record-type-badge.scss */
-.record-type-badge.resource {
-  color: #7608b5;
-  border-color: #7608b5;
-}
-button.resource {
-  color: #7608b5;
+.fa-yale-accession {
+      position: relative;
+  }
+
+.fa-yale-accession:before {
+      content: "\f0ad";
+      font-size: .8em;
+      position: absolute;
+      transform: rotate(270deg);
+      left: 2px;
+      top: 3px;
+  }
+
+.fa-yale-accession:after {
+      content: "\f016";
+      font-size: 1.2em;
+      left: 0;
+  }
+
+.series > .fa-file-o:before {
+      content: "\f1b2";
 }
 
-/*mdc:  ugh.  when they added this button to the core code,
-they did not add anything to the CSS so that the button
-would match the badge color. */
-button.accession {
-  color: #e01919;
-}
-
-/* line 41, archivesspace/record-type-badge.scss */
-.record-type-badge.digital_object
-, .record-type-badge.classification
-, .record-type-badge.repository  {
-  color: #000;
-  border-color: #000;
-}
-button.digital_object, button.classification, button.repository {
-  color: #000;
+/* same for buttons */
+button.digital_object, button.classification, button.repository, button.accession
+, button.resource, button.subject, button.agent {
+  color: #00171f;
 }
 
 /* line 25, archivesspace/record-type-badge.scss
 adding a new color for archival objects that are a "series"
-oi. */
+oi.
+keeping this here since we might need to add a new icon for series.
 .record-type-badge.archival_object.series {
   color: #0033cc;
   border-color: #0033cc
 }
+*/
 
 /* stuff for suggestion_correction section */
 div.suggest_correction {
@@ -823,7 +839,7 @@ padding-left: 0px;
 * Button and accordion alignment
 */
 .acc_button {
-font-family: Mallory-Light;
+font-family: Mallory;
 font-weight: 500;
 margin-bottom: 0.5em;
 padding-left: 15px;
@@ -833,7 +849,6 @@ padding-right: 15px;
 .present_list.top_containers {
 padding-left: 0px;
 list-style-type: none;
-margin-left: 0px;
 }
 
 /*
@@ -933,13 +948,13 @@ and i'm sure there's a more elegant way to do this,
 but i ran into issues when trying to use the "starts with" selector for alert- on the class names.
 */
 .alert-success, .alert-danger, .alert-warning, .alert-info {
-color: #1b1e21;
-background-color: #f8f8f8;
-border-color: #c6c8ca;
+color: #1b1e21 !important;
+background-color: #f8f8f8 !important;
+border-color: #c6c8ca !important;
 }
 .alert-danger .alert-link,
 .alert-success .alert-link,
 .alert-warning .alert-link,
 .alert-info .alert-link {
-color: #040505;
+color: #040505 !important;
 }
