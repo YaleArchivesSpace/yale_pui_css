@@ -91,12 +91,12 @@
     font-style: normal;
 }
 
-/* 
+/*
  * Modern Pictograms:  Icons recommended by Office of the Printer.
  * The font below is paid PRO PACK.
- * 
+ *
  * At some point there will also be custom icons, likely in another
- * font pack.  
+ * font pack.
  */
 @font-face {
     font-family: 'Modern-Pictograms';
@@ -842,7 +842,7 @@ padding-left: 0px;
 * Button and accordion alignment
 */
 .acc_button {
-font-family: Mallory;
+font-family: 'Mallory-Book';
 font-weight: 500;
 margin-bottom: 0.5em;
 padding-left: 15px;
