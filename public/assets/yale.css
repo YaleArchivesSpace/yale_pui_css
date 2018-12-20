@@ -29,8 +29,10 @@
 }
 
 @font-face {
-    font-family: "YaleMarks";
-    /* need to know how to embed this; Steve will update later */
+	/* This is the set of custom icons created by Eve Nieger */
+    	font-family: "YaleCustom";
+	src:	url("YaleCustom.eot") format("embedded-opentype"),
+		url("YaleCustom.ttf") format("truetype");
 }
 
 /* Mallory:  The official sans-serif font of *.yale.edu */
