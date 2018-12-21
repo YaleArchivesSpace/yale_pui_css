@@ -74,13 +74,12 @@
     src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff") format("woff"),
             url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff2") format("woff2");
 }
-/* Ask Steve about this (perhaps we can include a few icons that Eve adds here?) */
+
 @font-face {
-    font-family: 'customicons';
-    src: url("//libweb.library.yale.edu/fonts/custom/customicons.eot");
-    src: url("//libweb.library.yale.edu/fonts/custom/customicons.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/custom/customicons.woff") format("woff"), url("//libweb.library.yale.edu/fonts/custom/customicons.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/custom/customicons.svg#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
+	/* This is the set of custom icons created by Eve Nieger */
+  font-family: 'YaleCustom';
+	src:	url("//libweb.library.yale.edu/fonts/YaleCustom/YaleCustom.eot") format("embedded-opentype"),
+		    url("//libweb.library.yale.edu/fonts/YaleCustom/YaleCustom.ttf") format("truetype");
 }
 
 
@@ -843,6 +842,32 @@ padding-left: 0px;
 list-style-type: none;
 }
 
+
+/* new for custom icons */
+[class^="yc-"], [class*=" yc-"] {
+  font-family: 'YaleCustom' !important;
+  speak: none;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.yc-4x {font-size: 6em;}
+
+.yc-series:before {
+	/*whatever the code is in the font*/
+  content: "\0042";
+}
+.yc-collection:before {
+	/*whatever the code is in the font*/
+  content: "\0041";
+}
+
 /*
 * Suggest a correction modifications
 */
@@ -873,7 +898,7 @@ ul.classifications_list {
 }
 
 ul.classifications_list ul.breadcrumb {
-list-style-type: disc
+list-style-type: disc;
 }
 
 ul.classifications_list ul.breadcrumb>li {
@@ -927,9 +952,11 @@ please make better :)
 .panel-default>.panel-heading>.accordion-toggle {
 color: #333333;
 }
+
 .panel-default>.panel-heading>.accordion-toggle:hover {
 color: #007eaf;
 text-decoration: none;
+}
 
 /*
 mdc:
@@ -939,11 +966,13 @@ to have the same styling;
 and i'm sure there's a more elegant way to do this,
 but i ran into issues when trying to use the "starts with" selector for alert- on the class names.
 */
+
 .alert-success, .alert-danger, .alert-warning, .alert-info {
 color: #1b1e21 !important;
 background-color: #f8f8f8 !important;
 border-color: #c6c8ca !important;
 }
+
 .alert-danger .alert-link,
 .alert-success .alert-link,
 .alert-warning .alert-link,
