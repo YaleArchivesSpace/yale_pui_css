@@ -1,21 +1,42 @@
 /*
- * 2018-03-16 Yale University Library
+ * Initial CSS build:  2018-03-16 Yale University Library
  */
 
 /*
- * This is the new CSS that pulls in the yale.edu look-and-feel.
+ * The following CSS is used to customize the look-and-feel of the ArchivesSpace Public
+ * User Interface into the "Archives at Yale" product.
+ *
+ * The Archives at Yale look-and-feel was reviewed and approved by the Yale Office of the
+ * Printer and closely tracks the look-and-feel of Yale.edu.
+ *
+ * The CSS was finalized on 2019-01-02
  */
 
-/* YaleDesign:  The locally-developed official wordmark and serif font for Yale */
+/* 
+ * =============================================================================== font definitions
+ * 
+ * This section pulls in all of the custom fonts required by the interface.  The font
+ * files live on a VirtualHost called "libweb" that lives on a YUL server named
+ * "Sapphire".  
+ */
+
+ /*
+  * YaleDesign:  This font was developed at Yale University and is the official
+  * serif font of Yale's branding.
+  */
 @font-face {
   font-family: 'YaleDesign-Medium';
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot");
-  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.woff") format("woff");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot?#iefix") format("embedded-opentype"), 
+       url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.ttf") format("truetype"), 
+       url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.woff") format("woff");
 }
 @font-face {
   font-family: 'YaleDesign-Bold';
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot");
-  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.woff") format("woff");
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+        url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.ttf") format("truetype"), 
+        url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.woff") format("woff");
 }
 @font-face {
   font-family: 'YaleDesign-Italic';
@@ -28,12 +49,10 @@
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.woff") format("woff");
 }
 
-@font-face {
-    font-family: "YaleMarks";
-    /* need to know how to embed this; Steve will update later */
-}
-
-/* Mallory:  The official sans-serif font of *.yale.edu */
+ /*
+  * Mallory:  Mallory was chosen in 2018 as the official sans-serif font for
+  * Yale University web pages.
+  */
 @font-face {
     font-family: 'Mallory-Light';
     src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-Light.woff") format("woff"),
@@ -75,30 +94,36 @@
             url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff2") format("woff2");
 }
 
+ /*
+  * ycustom:  This is a custom-built font created by YUL.  It contains icons designed by
+  * Eve Neiger specifically for use in Archives at Yale.  These were developed as neither
+  * FontAwesome nor Modern Pictograms contained fonts appropriate for "Series" or "Collection."
+  */
 @font-face {
-	/* This font includes the custom icon created by Eve Neiger */
-  font-family: 'YaleCustom';
-	src:	url("//libweb.library.yale.edu/fonts/YaleCustom/YaleCustom.eot") format("embedded-opentype"),
-		    url("//libweb.library.yale.edu/fonts/YaleCustom/YaleCustom.ttf") format("truetype");
+  font-family: 'ycustom';
+    src:     url("//libweb.library.yale.edu/fonts/ycustom/ycustom.eot") format("embedded-opentype"),
+             url("//libweb.library.yale.edu/fonts/ycustom/ycustom.svg") format("svg"),
+             url("//libweb.library.yale.edu/fonts/ycustom/ycustom.woff") format("woff"),
+	     url("//libweb.library.yale.edu/fonts/ycustom/ycustom.ttf") format("truetype");
 }
 
-
-/*
- * Modern Pictograms:  Icons recommended by Office of the Printer.
- * The font below is paid PRO PACK.
- *
- * At some point there will also be custom icons, likely in another
- * font pack.
- (taking this out for now since we're still not using these)
+ /*
+  * FontAwesome:  The industry standard icons.
+  */
 @font-face {
-    font-family: 'Modern-Pictograms';
-    src: url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.woff") format("woff"),
-         url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.woff2") format("woff2"),
-         url("//libweb.library.yale.edu/fonts/ModernPictograms/ModernPictogramsPro-v278.eot") format("embedded-opentype");
+    font-family: 'FontAwesome';
+    src: url("/assets/fontawesome-webfont.eot?v=4.1.0");
+    src: url("//libweb.library.yale.edu/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-*/
+
+
+/* 
+ * ============================================================================ base element styles
+ * 
+ * This section defines the basic styles (fonts, colors) for HTML elements.
+ */
 
 body {
   font-family: 'Mallory-Book';
@@ -207,23 +232,6 @@ span.inline-label {
   font-size: 1.2em;
   font-family: 'Mallory-Medium';
 }
-
-footer.footer {
-  background-color: #00356b;
-  color: #bbbbbb;
-  margin-top: 3em;
-}
-
-footer.footer .links {
-  padding-top: 20px;
-}
-
-footer.footer .links a,
-footer.footer .links a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-
 
 div.profile {
   color: #ffffff;
@@ -344,6 +352,7 @@ nav ul.breadcrumb li a {
 
 
 /* footer stuff, first pass (copied from FindIt) */
+
 .footer {
     padding: .5em 0 .5em 0;
     width: 100%;
@@ -397,42 +406,25 @@ nav ul.breadcrumb li a {
     margin-right: 5px
 }
 
+footer.footer {
+    background-color: #00356b;
+    color: #bbbbbb;
+    margin-top: 3em;
+}
+  
+footer.footer .links {
+    padding-top: 20px;
+}
+  
+footer.footer .links a,
+footer.footer .links a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
 
 span.YaleLogo a:hover {
     padding: 5px
 }
-
-
-/* add these next 4 declarations back
-, once the YaleMarks font is loaded up top.
-(should probably just update all of the html in the footer, as well.)
-
-.y-yale:before {
-	content: '\f2a2';
-}
-
-.y-mark {
-  font-size: 1.1em;
-}
-
-.y-icons {
-  font-family: "YaleMarks";
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  speak: none;
-  display: inline-block;
-}
-
-
-.element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-}
-*/
 
 
 .sm-icons {
@@ -845,7 +837,7 @@ list-style-type: none;
 
 /* new for custom icons */
 [class^="yc-"], [class*=" yc-"] {
-  font-family: 'YaleCustom' !important;
+  font-family: 'ycustom' !important;
   speak: none;
   font-size: 22px;
   font-style: normal;
@@ -861,11 +853,11 @@ list-style-type: none;
 
 .yc-series:before {
 	/*whatever the code is in the font*/
-  content: "\0042";
+  content: "\e901";
 }
 .yc-collection:before {
 	/*whatever the code is in the font*/
-  content: "\0041";
+  content: "\e900";
 }
 
 /*
