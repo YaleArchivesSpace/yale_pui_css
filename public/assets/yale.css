@@ -12,12 +12,12 @@
  * The CSS was finalized on 2019-01-02
  */
 
-/* 
+/*
  * =============================================================================== font definitions
- * 
+ *
  * This section pulls in all of the custom fonts required by the interface.  The font
  * files live on a VirtualHost called "libweb" that lives on a YUL server named
- * "Sapphire".  
+ * "Sapphire".
  */
 
  /*
@@ -27,15 +27,15 @@
 @font-face {
   font-family: 'YaleDesign-Medium';
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot");
-  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot?#iefix") format("embedded-opentype"), 
-       url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.ttf") format("truetype"), 
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.eot?#iefix") format("embedded-opentype"),
+       url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.ttf") format("truetype"),
        url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-medium-webfont.woff") format("woff");
 }
 @font-face {
   font-family: 'YaleDesign-Bold';
   src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot");
-  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot?#iefix") format("embedded-opentype"), 
-        url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.ttf") format("truetype"), 
+  src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.ttf") format("truetype"),
         url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bold-webfont.woff") format("woff");
 }
 @font-face {
@@ -107,21 +107,10 @@
 	     url("//libweb.library.yale.edu/fonts/ycustom/ycustom.ttf") format("truetype");
 }
 
- /*
-  * FontAwesome:  The industry standard icons.
-  */
-@font-face {
-    font-family: 'FontAwesome';
-    src: url("/assets/fontawesome-webfont.eot?v=4.1.0");
-    src: url("//libweb.library.yale.edu/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//libweb.library.yale.edu/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
 
-
-/* 
+/*
  * ============================================================================ base element styles
- * 
+ *
  * This section defines the basic styles (fonts, colors) for HTML elements.
  */
 
@@ -411,11 +400,11 @@ footer.footer {
     color: #bbbbbb;
     margin-top: 3em;
 }
-  
+
 footer.footer .links {
     padding-top: 20px;
 }
-  
+
 footer.footer .links a,
 footer.footer .links a:hover {
     color: #ffffff;
@@ -839,7 +828,6 @@ list-style-type: none;
 [class^="yc-"], [class*=" yc-"] {
   font-family: 'ycustom' !important;
   speak: none;
-  font-size: 22px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -849,14 +837,12 @@ list-style-type: none;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.yc-4x {font-size: 6em;}
+.yc-4x {font-size: 4em;}
 
 .yc-series:before {
-	/*whatever the code is in the font*/
   content: "\e901";
 }
 .yc-collection:before {
-	/*whatever the code is in the font*/
   content: "\e900";
 }
 
