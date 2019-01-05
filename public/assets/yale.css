@@ -48,7 +48,7 @@
     src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot");
     src: url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.ttf") format("truetype"), url("//libweb.library.yale.edu/fonts/YaleDesign/yaledesign-bolditalic-webfont.woff") format("woff");
   }
-  
+
    /*
     * Mallory:  Mallory was chosen in 2018 as the official sans-serif font for
     * Yale University web pages.
@@ -93,7 +93,7 @@
       src:    url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff") format("woff"),
               url("//libweb.library.yale.edu/fonts/mallory/Mallory-MediumItalic.woff2") format("woff2");
   }
-  
+
    /*
     * ycustom:  This is a custom-built font created by YUL.  It contains icons designed by
     * Eve Neiger specifically for use in Archives at Yale.  These were developed as neither
@@ -106,32 +106,32 @@
                url("//libweb.library.yale.edu/fonts/ycustom/ycustom.woff") format("woff"),
          url("//libweb.library.yale.edu/fonts/ycustom/ycustom.ttf") format("truetype");
   }
-  
-  
+
+
   /*
    * ============================================================================ base element styles
    *
    * This section defines the basic styles (fonts, colors) for HTML elements.
    */
-  
+
   body {
     font-family: 'Mallory-Book';
     background-color: #ffffff;
   }
-  
+
   a {
     color: #0053a8;
   }
-  
+
   #header {
     background-color: #00356b;
   }
-  
+
   /* !important needed to override an explicit !important in style.css line 9 */
   #header > div.row {
     border: 0px !important;
   }
-  
+
   div.h1 {
     /* mdc: removing this!
     margin-top: 10px;
@@ -143,7 +143,7 @@
     /* adding the font-size back */
     font-size: 2.5em;
   }
-  
+
   div.h1 > a,
   div.h1 > a:hover {
     font-family: 'YaleDesign-Medium';
@@ -151,12 +151,12 @@
     color: #ffffff;
     text-decoration: none;
   }
-  
-  
+
+
   nav.navbar {
     border: 0px;
   }
-  
+
   /*
     * !important required to override an applicationxxxxx.css (autogen)
     * There is no !important directive in this file.
@@ -165,7 +165,7 @@
     background-color: #000000 !important;
     border: 0px;
   }
-  
+
   /*
     * !important required to override color in applicationxxxxx.css (autogen)
     * There is no !important directive in this file for color.
@@ -178,50 +178,50 @@
     color: #ffffff !important;
     text-decoration: none !important;
   }
-  
+
   ul.navbar-nav > li > a:hover {
     color: #63aaff !important;
     transition-duration: 0.3s;
   }
-  
+
   h1 {
     font-family: 'Mallory-medium';
     color: #555;
     font-size: 1.75em;
     font-weight: 500;
   }
-  
+
   h2 {
     font-family: 'Mallory-Medium';
     font-weight: 500;
     font-size: 1.5em;
     color: #00356b;
   }
-  
+
   h3 {
     font-family: 'Mallory-Medium';
     font-weight: 500;
     color: #00356b;
   }
-  
+
   h4, h2.smaller_gray {
     font-family: 'Mallory-Medium';
     font-weight: 500;
     color: inherit;
     font-size: 1.2em;
   }
-  
-  
+
+
   span.inline-label {
     font-family: 'Mallory-Medium';
   }
-  
+
   .btn-dark {
     background-color: #00356b;
     font-size: 1.2em;
     font-family: 'Mallory-Medium';
   }
-  
+
   div.profile {
     color: #ffffff;
     font-family: 'YaleDesign-Medium';
@@ -231,7 +231,7 @@
     margin-top: 0px !important;
     padding: 10px 0px 10px 15px;
   }
-  
+
   /*
    * Float the breadcrumbs to the top of the page.
    * This should absolutely be changed in code as this
@@ -243,9 +243,9 @@
   div#info_row {
     margin-bottom:1em;
   }
-  
-  
-  
+
+
+
   /* test for pointer breadcrumbs
   a few updated by mdc.... adding color and padding here,
   since the classification breadcrumbs don't always have an anchor links
@@ -284,24 +284,24 @@
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
   }
-  
+
   /* This removes the arrow at the left for the highest level breadcrumb */
   nav ul.breadcrumb li:first-child:before {
     display: none
   }
-  
+
   /*mdc: removing the background color from the default
   stylesheet */
   nav .breadcrumb {
     background-color: transparent;
     border: 1px solid #f5f5f5;
   }
-  
+
   /*mdc: need one more fix for classificiton pages.
   can have a single li, but no Anchor.  in that case, we need to keep the font black.
   */
-  
-  
+
+
   /* mdc: added :not(:only-child) for searching-within-collection pages */
   nav ul.breadcrumb li:last-child:not(:only-child),
   nav ul.breadcrumb li:last-child:before,
@@ -315,45 +315,45 @@
     color: #000000;
     content: '' !important;
   }
-  
+
   nav ul.breadcrumb li a {
     position: relative;
     display: block;
     color: #ffffff;
   }
-  
+
   nav ul.breadcrumb li:first-child a{
     padding-left: 0px;
     margin-left: -4px;
   }
-  
+
   /* skw:  We overrode all <a> tags to Mallory-Medium.
    * Breadcrumbs shouldn't be in that font.
    */
   nav ul.breadcrumb li a {
     font-family: Mallory-Light;
   }
-  
+
   .record-type-badge {
     font-family: Mallory-Bold;
     font-weight: 500;
   }
-  
-  
+
+
   /* footer stuff, first pass (copied from FindIt) */
-  
+
   .footer {
       padding: .5em 0 .5em 0;
       width: 100%;
       height: 10%;
       background-color: #01346B
   }
-  
+
   #footer-links {
       float: left;
       margin-left: 35px;
   }
-  
+
   #footer-links a {
       color: #fff;
       display: inline-block;
@@ -371,7 +371,7 @@
       -webkit-padding-start: 5px;
       margin-right: 10px
   }
-  
+
   #footer-links a:hover {
       background-color: #014d9e;
       border-bottom: none;
@@ -389,39 +389,39 @@
       text-decoration: none;
       margin-right: 10px
   }
-  
+
   #footer-links span {
       /*border-right: solid 1px #014d9e;*/
       margin-right: 5px
   }
-  
+
   footer.footer {
       background-color: #00356b;
       color: #bbbbbb;
       margin-top: 3em;
   }
-  
+
   footer.footer .links {
       padding-top: 20px;
   }
-  
+
   footer.footer .links a,
   footer.footer .links a:hover {
       color: #ffffff;
       text-decoration: none;
   }
-  
+
   span.YaleLogo a:hover {
       padding: 5px
   }
-  
-  
+
+
   .sm-icons {
       display: inline-block;
       float: right;
       margin: 1.5em 1em 0 0
   }
-  
+
   .sm-icons a {
       color: #fff;
       display: inline-block;
@@ -439,7 +439,7 @@
       -webkit-padding-start: 5px;
       margin-right: 5px
   }
-  
+
   .sm-icons a:hover {
       background-color: #014d9e;
       border-bottom: none;
@@ -457,74 +457,74 @@
       text-decoration: none;
       margin-right: 5px
   }
-  
+
   .sm-icons i {
       font-size: 2em
   }
-  
+
   .YaleLogo {
       font-family: 'YaleDesign-Medium';
       font-size: 29px;
       line-height: 30px
   }
-  
+
   .YaleLogo a {
       color: #fff;
       margin-right: 5px
   }
-  
+
   /* mdc: bug fixes for Definition List layout
   should update so that this update
   is Responsive, as well*/
   /* add more width so there's no truncation */
-  
+
   /* skw: setting the width to "auto" should do the trick, so I did that. */
     .dl-horizontal dt {
       width: auto;
     }
   /* add more space between the dt and dd */
-  
+
   /* skw -- I took this out because we need to align the labels with the left
    * instead of the right.
    .dl-horizontal dd {
     margin-left: 220px;
   }
   */
-  
+
   /*mdc: temp change to shrink header a bit */
   #header > .row {
     height: 4.7rem;
   }
-  
+
   /*mdc: temp fix for font override */
   .record-type-badge {
     font-family: "Mallory-Medium";
   }
-  
+
   /*mdc: i just can't stand those rounded pills no more */
   /* line 109 aspace.scss */
   .tabbing.nav-pills > li:first-child a {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-  
+
   .tabbing.nav-pills > li:last-child a {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  
+
   /* line 101, aspace.scss */
   .tabbing.nav-pills > li > a {
     margin-left: 0px;
   }
-  
+
   /* mdc: facet to the rights */
   .pull-right {
     float:right;
   }
-  
+
   /*mdc: more changes, now for the new sidebar stuff */
-  
+
   @media (min-width: 992px) {
     /* line 855, aspace.scss */
     #sidebar.resizable-sidebar {
@@ -552,7 +552,7 @@
   .largetree-container tr td {
     border-bottom: 1px solid #ddd;
   }
-  
+
   /*mdc: uncomment the next 3 declarations for a gray background
   for the current section */
   /* line 125, largetree.scss */
@@ -566,8 +566,8 @@
   .largetree-container tr.current td a {
     /*color: #fff;*/
   }
-  
-  
+
+
   /* line 133, largetree.scss */
   .largetree-container .indentor {
     background-color: #f9f9f9;
@@ -580,13 +580,13 @@
   .largetree-container table.root tbody tr:first-child {
        background-color: transparent
   }
-  
+
   /*mdc: more changes, just because the non-yale blues are bothering me now */
   /* line 101, archivesspace/aspace.scss */
   .tabbing.nav-pills > li > a {
     background-color: #286dc0;
   }
-  
+
   /*mdc: infinite scroll page stuff (just for testing/finding purposes) */
   /*
   div.infinite-record-scrollbar {
@@ -594,25 +594,25 @@
     margin-left: 20px;
   }
   */
-  
+
   /* mdc: just because the default gray background is bothering me */
   /* line 483, aspace.scss */
   .searchstatement {
     background-color: transparent;
   }
-  
+
   div.sm-icons a.hashtag {
      vertical-align: middle;
      display:inline-block;
      height: 3em;
   }
-  
+
   div.sm-icons a.hashtag:hover {
       background-color: transparent;
       color: #63aaff;
       margin-right: 5px
   }
-  
+
   /*mdc: css dropdown stuff for Repositories */
   .dropdown-menu .sub-menu {
       left: 100%;
@@ -639,7 +639,7 @@
   div.contact_info {
     margin-bottom:1.75rem;
   }
-  
+
   /*mdc: link color is virtually impossible to meet
   should we underline all links? */
   a {
@@ -656,43 +656,45 @@
          */
     font-weight: 500;
   }
-  
-  
+
+
   /* changing all record type badges to a dark, dark grey */
-  div[class^="record-type-badge"] {
+  /* mdc: updating this, since it needs to hit span elements, as well */
+  [class^="record-type-badge"] {
     color: #00171f !important;
     border-color: #00171f !important;
   }
-  
+
+
   .fa-yale-accession {
         position: relative;
     }
-  
-    .fa-yale-accession:before {
-          content: "\f0ad";
-          font-size: .6em;
-          position: absolute;
-          transform: rotate(270deg);
-          left: 2.5px;
-          top: 5px;
-      }
-  
+
+  .fa-yale-accession:before {
+        content: "\f0ad";
+        font-size: .6em;
+        position: absolute;
+        transform: rotate(270deg);
+        left: 2.5px;
+        top: 5px;
+    }
+
   .fa-yale-accession:after {
         content: "\f016";
         font-size: 1.2em;
         left: 0;
     }
-  
+
   .series > .fa-file-o:before {
         content: "\f1b2";
   }
-  
+
   /* same for buttons */
   button.digital_object, button.classification, button.repository, button.accession
   , button.resource, button.subject, button.agent {
     color: #00171f;
   }
-  
+
   /* line 25, archivesspace/record-type-badge.scss
   adding a new color for archival objects that are a "series"
   oi.
@@ -702,7 +704,7 @@
     border-color: #0033cc
   }
   */
-  
+
   /* stuff for suggestion_correction section */
   div.suggest_correction {
     margin: 2em 0 1em 0;
@@ -713,7 +715,7 @@
      */
     padding: 15px 0;
   }
-  
+
   /*
   * Fix to make search result titles in the appropriate font
   */
@@ -721,23 +723,23 @@
   font-family: Mallory-Bold;
   font-weight: 500;
   }
-  
+
   /* OUP:  Search Results ------------------------------------------------*/
-  
+
   /* Modify results search box:
   * - Align placeholder test with all other text in the left column.
   * - Align *Search* button text with the other text in the left column.
   */
   .form-horizontal {
     position: relative;
-  
+
   }
   .form-horizontal .form-group,
   .form-horizontal {
   margin-left: 0px !important;
   margin-right: 0px !important;
   }
-  
+
   /*
   * Match _Filter Results_ vertical alignment with paging labels,
   * *Relevance* pull-down, and *Sort* button label
@@ -745,7 +747,7 @@
   h2 {
   padding-top: 3px;
   }
-  
+
   /* Modify search result description blocks:
   * - Drop Call Number to its own line (this also aligns the icon)
   */
@@ -758,13 +760,13 @@
     margin-left: 0px !important;
     padding: 1em 0 0 0 !important;
   }
-  
+
   /* - Insert 1em padding on top of all description sections.
   */
   .recordsummary > div {
     padding-top: 1em;
   }
-  
+
   /* - Bold all labels (this also sets "strong" tags appropriately
   */
   strong,
@@ -774,9 +776,9 @@
     font-family: Mallory-Bold;
     font-weight: normal;
   }
-  
+
   /* OUP:  Sort Display --------------------------------------------------------- */
-  
+
   /*
   * Match *Relevance* drop-down to results paging size
   */
@@ -784,7 +786,7 @@
   font-size: 14px;
   padding: 6px 12px 8px;
   }
-  
+
   /*
   * Match *Sort* button to size of drop-down/paging size
   */
@@ -794,19 +796,19 @@
   top: -2px !important;
   padding-bottom: 6px;
   }
-  
+
   /*
   * Flush *New Search* and *Refine Search* buttons right
   */
   .pull-right {
   padding: 17px 0px
   }
-  
+
   /* OUP:  Collection/Sub-collection page alignments ----------------------- */
   .subnote {
   padding-left: 0px;
   }
-  
+
   /*
   * Button and accordion alignment
   */
@@ -817,13 +819,13 @@
   padding-left: 15px;
   padding-right: 15px;
   }
-  
+
   .present_list.top_containers {
   padding-left: 0px;
   list-style-type: none;
   }
-  
-  
+
+
   /* new for custom icons */
   [class^="yc-"], [class*=" yc-"] {
     font-family: 'ycustom' !important;
@@ -836,16 +838,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .yc-4x {font-size: 4em;}
-  
+
   .yc-series:before {
     content: "\e901";
   }
   .yc-collection:before {
     content: "\e900";
   }
-  
+
   /*
   * Suggest a correction modifications
   */
@@ -861,7 +863,7 @@
   background: none;
   text-decoration: underline;
   }
-  
+
   /*
   * Correct the "Classifications" accordion breadcrumbs.
   * These had lumped in with the nav breadcrumbs and created havoc.
@@ -874,21 +876,21 @@
    list-style: none;
    padding: 0px;
   }
-  
+
   ul.classifications_list ul.breadcrumb {
   list-style-type: disc;
   }
-  
+
   ul.classifications_list ul.breadcrumb>li {
   display: list-item;
   }
-  
+
   ul.classifications_list ul.breadcrumb>li+li:before,
   ul.classifications_list ul.breadcrumb>li+li:after {
    content: '' !important;
    padding: 0px;
   }
-  
+
   /* This helps out the bullets under the "Finding aid and Administrative Information"
   * heading.
   */
@@ -896,13 +898,13 @@
    margin-left: 17px;
    padding: 0px;
   }
-  
+
   /* OUP: Repo Page ------------------------------------------------ */
   /* tighten up the contact display */
   .contact_info {
   font-size: 18px;
   }
-  
+
   .website {
   font-size: 18px;
   padding: 10px 0px;
@@ -911,18 +913,18 @@
   display: block;
   margin-top: 10px;
   }
-  
+
   .alert {
   padding-right: 0;
   margin-left: -6px
   }
-  
+
   .alert .well {
   width: 75%;
   float: left;
   margin-left: 25%;
   }
-  
+
   /*
   changes for changes to accordion section (mdc), now that i've made the entire div a link
   please make better :)
@@ -930,12 +932,12 @@
   .panel-default>.panel-heading>.accordion-toggle {
   color: #333333;
   }
-  
+
   .panel-default>.panel-heading>.accordion-toggle:hover {
   color: #007eaf;
   text-decoration: none;
   }
-  
+
   /*
   mdc:
   i would like to change this behavior in the model or in sass,
@@ -944,17 +946,16 @@
   and i'm sure there's a more elegant way to do this,
   but i ran into issues when trying to use the "starts with" selector for alert- on the class names.
   */
-  
+
   .alert-success, .alert-danger, .alert-warning, .alert-info {
   color: #1b1e21 !important;
   background-color: #f8f8f8 !important;
   border-color: #c6c8ca !important;
   }
-  
+
   .alert-danger .alert-link,
   .alert-success .alert-link,
   .alert-warning .alert-link,
   .alert-info .alert-link {
   color: #040505 !important;
   }
-  
