@@ -660,7 +660,7 @@ it out for now (mdc).
 
 /* changing all record type badges to a dark, dark grey */
 /* mdc: updating this, since it needs to hit span elements, as well */
-[class^="record-type-badge"] {
+  [class^="record-type-badge"], [class*=" record-type-badge"] {
   color: #00171f !important;
   border-color: #00171f !important;
 }
