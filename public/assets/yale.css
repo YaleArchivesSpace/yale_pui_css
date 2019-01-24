@@ -798,10 +798,12 @@ padding-bottom: 6px;
 
 /*
 * Flush *New Search* and *Refine Search* buttons right
-*/
+This top padding was causing problems in a few places, so i'm taking it out of test
+for the time being.  Any reason to keep this??? -- mdc.
 .pull-right {
 padding: 17px 0px
 }
+*/
 
 /* OUP:  Collection/Sub-collection page alignments ----------------------- */
 .subnote {
