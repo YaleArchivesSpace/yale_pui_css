@@ -768,9 +768,12 @@
   }
 
   /* - Bold all labels (this also sets "strong" tags appropriately
+  updated since core looks to have "render-bold" and "bold" outputs.
+  need to verify and see what happens when this formatting is applied in h1 elements and elsewhere.
   */
   strong,
   span.inline-label,
+  span.bold,
   .identifier span.id-label,
   .component {
     font-family: Mallory-Bold;
