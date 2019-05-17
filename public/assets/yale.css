@@ -963,3 +963,33 @@ border-color: #c6c8ca !important;
 .alert-info .alert-link {
 color: #040505 !important;
 }
+
+/*
+mdc:  new additions for updated single-scroll view
+*/
+
+.infinite-item dl.dl-horizontal dt {
+  width: auto;
+  padding: 0 0 0.5em 0;
+  margin-bottom: 0;
+ }
+
+ .infinite-item dl.dl-horizontal dd {
+   margin: 0;
+   padding: 0 0 0.5em 0;
+   clear:both;
+ }
+
+/* removing unneeded spacing */
+ .infinite-item dl.dl-horizontal {
+   padding-bottom: 0px;
+ }
+
+/* just to get some breathing room. this should be in the core CSS, sassified */
+.infinite-item {
+  padding: 5px 0 20px 0;
+}
+
+.infinite-item .record-type-badge {
+  font-family: "Mallory-Book";
+}
