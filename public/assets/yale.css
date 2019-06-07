@@ -790,23 +790,41 @@ padding: 6px 12px 8px;
 }
 
 /*
-* Match *Sort* button to size of drop-down/paging size
-*/
+Match *Sort* button to size of drop-down/paging size
+note:
+the -2px declaration above was causing issues elsewhere
+, as was the padding.  let's get rid of all this and address it in a more targetted fashion
+last question:  do we want smaller buttons in the single-scroll view, or is our 14px default okay?
+--mdc*/
+
 .btn {
 font-size: 14px;
+white-space: normal;
+/*
 position: relative;
 top: -2px !important;
 padding-bottom: 6px;
+*/
+}
+/* mdc:  this is a more targetted way to deal with the *Sort* button */
+.sorter {
+  padding-bottom: 6px;
+}
+/* mdc: and since we've got larger buttons, let's add a little space before the *Refine Search* section when visible */
+#refineSearchPanel {
+  margin-top: 1.5em;
 }
 
 /*
 * Flush *New Search* and *Refine Search* buttons right
-This top padding was causing problems in a few places, so i'm taking it out of test
-for the time being.  Any reason to keep this??? -- mdc.
-.pull-right {
-padding: 17px 0px
+The top padding that was originally added to our local CSS introduced two new problems:
+  1) played havoc with the request buttons in the single-scroll views
+  2) ruined the layout of the the refine search section, once someone clicked on the *Refine Search* button.
+The following fixes both issues (and precisely lines up the buttons).
+-- mdc. */
+div.searchstatement .btn-group {
+  left: 15px;
 }
-*/
 
 /* OUP:  Collection/Sub-collection page alignments ----------------------- */
 .subnote {
