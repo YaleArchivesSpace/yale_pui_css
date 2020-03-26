@@ -982,6 +982,31 @@ border-color: #c6c8ca !important;
 color: #040505 !important;
 }
 
+/* mdc: new addition for temp solution to emergency banner */
+#emergency-top-banner {
+  background-color: #c5000f;
+  border-top: 10px solid #6c1003;
+  padding: 0 0 15px 50px;
+  margin-bottom: 0;
+}
+#emergency-top-banner a {
+    text-decoration: underline;
+}
+#emergency-top-banner * {
+      color: #fff;
+}
+#emergency-top-banner h2 {
+      margin-top: 12px;
+}
+#emergency-top-banner span {
+      color: #fff;
+      font-size: 30px;
+}
+#emergency-top-banner button {
+  padding: 4px 4px 4px 6px;
+  margin-right: 20px;
+}
+
 /*
 mdc:  new additions for updated single-scroll view
 */
