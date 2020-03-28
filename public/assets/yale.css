@@ -485,11 +485,16 @@ is Responsive, as well*/
 /* add more space between the dt and dd */
 
 /* skw -- I took this out because we need to align the labels with the left
- * instead of the right.
- .dl-horizontal dd {
-  margin-left: 220px;
-}
+ * instead of the right.*/
+ /* mdc -- i put this back in, but updated it for large screens only.
+ without the margin (set at 180 in the default stylesheets), the long DLs in our custom font size have no space before the DD
+ e.g. "Language of descriptionEnglish".   instead of "Language of description   English"
 */
+@media (min-width: 768px) {
+ .dl-horizontal dd {
+   margin-left: 220px;
+ }
+}
 
 /*mdc: temp change to shrink header a bit */
 #header > .row {
