@@ -485,11 +485,16 @@ is Responsive, as well*/
 /* add more space between the dt and dd */
 
 /* skw -- I took this out because we need to align the labels with the left
- * instead of the right.
- .dl-horizontal dd {
-  margin-left: 220px;
-}
+ * instead of the right.*/
+ /* mdc -- i put this back in, but updated it for large screens only.
+ without the margin (set at 180 in the default stylesheets), the long DLs in our custom font size have no space before the DD
+ e.g. "Language of descriptionEnglish".   instead of "Language of description   English"
 */
+@media (min-width: 768px) {
+ .dl-horizontal dd {
+   margin-left: 220px;
+ }
+}
 
 /*mdc: temp change to shrink header a bit */
 #header > .row {
@@ -980,6 +985,31 @@ border-color: #c6c8ca !important;
 .alert-warning .alert-link,
 .alert-info .alert-link {
 color: #040505 !important;
+}
+
+/* mdc: new addition for temp solution to emergency banner */
+#emergency-top-banner {
+  background-color: #c5000f;
+  border-top: 10px solid #6c1003;
+  padding: 0 0 15px 50px;
+  margin-bottom: 0;
+}
+#emergency-top-banner a {
+    text-decoration: underline;
+}
+#emergency-top-banner * {
+      color: #fff;
+}
+#emergency-top-banner h2 {
+      margin-top: 12px;
+}
+#emergency-top-banner span {
+      color: #fff;
+      font-size: 30px;
+}
+#emergency-top-banner button {
+  padding: 4px 4px 4px 6px;
+  margin-right: 20px;
 }
 
 /*
