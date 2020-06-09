@@ -1041,3 +1041,17 @@ mdc:  new additions for updated single-scroll view
 .infinite-item .record-type-badge {
   font-family: "Mallory-Book";
 }
+
+/* change tree icons from chevrons to plus/minus icons */
+body #tree-container .expandme .expandme-icon:before {
+    content: "\002b";
+}
+
+body #tree-container .expandme .expandme-icon.expanded:before {
+    content: "\2212";
+}
+
+body #tree-container .expandme .expandme-icon.expanded {
+    transform: none;
+    transition: none;
+}
