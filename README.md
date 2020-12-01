@@ -1,12 +1,6 @@
 ArchivesSpace Plugin to provide local CSS declarations within the PUI.
 ===============
 
-## Getting Started
+## Obsolete
 
-Enable the plugin by editing the file in `config/config.rb`:
-
-    AppConfig[:plugins] >> 'yale_css'
-
-Update the "yale.css" file as desired.
-
-Restart the application.
+This plugin has been folded into and superseded by our [yale_pui_customizations](https://github.com/YaleArchivesSpace/yale_pui_customizations) plugin.
